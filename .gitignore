@@ -1,0 +1,23 @@
+#___________________________________
+#  1. cache, build, db sqlite3 files
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+desktop.ini
+Thumbs.db
+.ipynb_checkpoints/
+__pycache__/
+
+
+#___________________________________
+#  2. Temporary raw data > 50.0 MB
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+train.csv
+test.csv
+
+
+#___________________________________
+#  3. large remake data > 50.0 MB
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xtra_remake_xtest.csv
+xtra_remake_xtest_r01.csv
+xtra_remake_xtrain.csv
+xtra_remake_xtrain_r01.csv
