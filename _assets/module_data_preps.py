@@ -1,5 +1,5 @@
 """
-# GAME_ID 유니크 데이터 전처리를 위한 모듈 - baseline offer
+# 학습용 Data-set 추출 from Raw data (Baseline offer)
 """
 print(__doc__)
 
@@ -180,24 +180,22 @@ def species_converter(string):
         raise ValueError
 
 def data_preparation(df, answer=False):
-    """
-    # 데이터 전 처리 : 학습용 X, Y 전처리 데이터를 생성한다.
-    # x_train, y_train = data_preparation(df_train_cut71, answer=True)
-    #
-    # x_train = <class 'pandas.core.frame.DataFrame'>
-    # y_train = <class 'numpy.ndarray'>
+    """ Dacon Baseline data-preparation code
+    # x, y = data_preparation(df, answer=True)
+    # x = <class 'pandas.core.frame.DataFrame'>
+    # y = <class 'numpy.ndarray'>
     """
     game_ids = df['game_id'].unique()
 
     # 8개의 이벤트 액티비티가 존재!
-    events = ['Ability',                # 생산,공격 등 선수 주요행동
-              'AddToControlGroup',      # 부대에 추가
-              'Camera',                 # 시점 선택
-              'ControlGroup',           # 부대 행동
-              'GetControlGroup',        # 부대 불러오기
-              'Right Click',            # 마우스 우클릭
-              'Selection',              # 객체 선택
-              'SetControlGroup',        # 부대 지정
+    events = ['Ability',           # 생산,공격 등 선수 주요행동
+              'AddToControlGroup', # 부대에 추가
+              'Camera',            # 시점 선택
+              'ControlGroup',      # 부대 행동
+              'GetControlGroup',   # 부대 불러오기
+              'Right Click',       # 마우스 우클릭
+              'Selection',         # 객체 선택
+              'SetControlGroup',   # 부대 지정
             ]
 
     # 플레이어별 이벤트 발생횟수를 카운트하는 DICT를 생성.저장
