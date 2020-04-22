@@ -14,21 +14,21 @@
 
 ## COLUMN COMPARISON : TRAIN & TEST
 
-| NUM |  TRAIN.CSV  | TEST.CSV       |   IS_SAME |
-| :-: | ------------ | ------------ | :-------: |
-|1 | game_id                 | game_id                 | True  |
-|2 | winner                  | time                    | False |
-|  3   | time                    | player                  | False |
-|4 | player                  | species                 | False |
-|5 | species                 | event                   | False |
-|6 | event                   | event_contents          | False |
-|7 | event_contents          | -                       | False |
+| NUM |  TRAIN.CSV  | TEST.CSV       | IS_SAME |
+|:---:|-------------|----------------|:-------:|
+|1 | game_id        | game_id        | True    |
+|2 | winner         | time           | False   |
+|3 | time           | player         | False   |
+|4 | player         | species        | False   |
+|5 | species        | event          | False   |
+|6 | event          | event_contents | False   |
+|7 | event_contents | -              | False   |
 
 
 
 ## DATA DETAILS
 
-| 컬럼명            | 값                | type   | 설명                           | 비고              |
+| 컬럼명         | 값                | type   | 설명                           | 비고              |
 | -------------- | ----------------- | ------ | ------------------------------ | ----------------- |
 | game_id        | 33781             | int    | 경기 구분 기호                 | unique (multiple) |
 | winner         | 0.6523            | float  | player-1 승리확률              | 0.6287            |
@@ -54,7 +54,7 @@
 
 # LGBM Parametric Study
 
-| NUM | SEEd | RANDOM | ITERATION | n_ESTIMATION | num_LEAF | TIME_SPEND| PREDICTION |
+| NUM | SEED | RANDOM | ITERATION | n_ESTIMATION | num_LEAF | TIME_SPEND| PREDICTION |
 |:---:|-----:|---:|---:|-----:|-----:|----------:|:--------:|
 | 1   | 50000| 20 | 50 | 1024 | 1024 | 47.28 min | 60.369 % |
 | 2   |  4321| 20 | 50 |  500 |  500 | 20.37 min | 60.617 % |
