@@ -13,13 +13,13 @@ import sys
 HOME= 'dacon_competition_2020'                  # HOME FOLDER!
 dir_base = "".join(os.getcwd().partition(HOME)[:2]) + "\\"
 
-raw      = 'c03_starcraft_prediction/data_raw/'
-remake   = 'c03_starcraft_prediction/data_remake/'
-submit   = 'c03_starcraft_prediction/data_submit/'
+assets = dir_base + '_assets/'
+statics= dir_base + '_statics/'
+images = statics + 'images/'
 
-assets   = dir_base + '_assets/'
-statics  = dir_base + '_statics/'
-images   = statics + 'images/'
+raw    = 'c03_starcraft_prediction/data_raw/'
+remake = 'c03_starcraft_prediction/data_remake/'
+submit = 'c03_starcraft_prediction/data_submit/'
 
 
 if not dir_base in sys.path:
